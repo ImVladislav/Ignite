@@ -1,57 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ignite</title>
-        <link rel="stylesheet" href="styles.css"> <!-- Підключення CSS -->
-        <link rel="icon" href="logo.png" type="image/png"> <!-- Додавання фавіконки -->
-    </head>
-<body>
-    <div class="header">
-        <img src="ico7.png" alt="Logo" class="logo">
-        <div>
-        <img class="title" src="logo_1.png"/>
-    </div>
-    <p class="slogan">
-        <span>WORK</span>
-        <span>HARD,</span>
-        <span>PLAY</span>
-        <span>HARD</span>
-      </p>
-    </div>
-    <div class="progress-bar">
-        <div class="progress-text" id="progressText">
-          хххххххххххххххххххх
-        </div>
-      </div>
-      <div class="icons">
-        <a href="https://link1.com" target="_blank">
-            <img src="ico1.png" alt="Icon 1">
-        </a>
-        <a href="https://link2.com" target="_blank">
-            <img src="ico2.png" alt="Icon 2">
-        </a>
-        <a href="https://link3.com" target="_blank">
-            <img style="height: auto;" src="ico6.png" alt="Icon 3">
-        </a>
-        <a href="https://link4.com" target="_blank">
-            <img src="ico3.png" alt="Icon 4">
-        </a>
-        <a href="https://link5.com" target="_blank">
-            <img src="ico4.png" alt="Icon 5">
-        </a>
-    </div>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Ignite</title>
+      <link rel="stylesheet" href="styles.css" />
+      <!-- Підключення CSS -->
+      <link rel="icon" href="logo.png" type="image/png" />
+      <!-- Додавання фавіконки -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+         rel="stylesheet"
+      />
+   </head>
+   <body>
+      <div class="container">
+         <div class="header">
+            <img src="ico7.png" alt="Logo" class="main-logo" />
+            <img src="logo_1.png" alt="Ignite" class="title" />
+            <p class="slogan">
+               <span>WORK</span>
+               <span>HARD,</span>
+               <span>PLAY</span>
+               <span>HARD</span>
+            </p>
+         </div>
 
-    <script>
-        document.getElementById('progressText').addEventListener('click', function () {
-            const textToCopy = this.textContent; // Отримуємо текст з блоку
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                alert('Text copied to clipboard!');
-            }).catch(err => {
-                console.error('Failed to copy text: ', err);
+         <div class="progress-bar">
+            <div class="progress-text" id="progressText">
+               хххххххххххххххххххх
+            </div>
+         </div>
+
+         <div class="icons">
+            <a href="https://dextools.io/" target="_blank">
+               <img src="ico1.png" alt="Icon 1" />
+            </a>
+            <a href="https://dexscreener.com/" target="_blank">
+               <img src="ico2.png" alt="Icon 2" />
+            </a>
+            <a href="https://raydium.io/" target="_blank">
+               <img src="ico6.png" alt="Icon 3" />
+            </a>
+            <a href="https://t.me/" target="_blank">
+               <img src="ico3.png" alt="Icon 4" />
+            </a>
+            <a href="https://x.com/" target="_blank">
+               <img src="ico4.png" alt="Icon 5" />
+            </a>
+         </div>
+
+         <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <!-- добавить нужное количество частиц -->
+         </div>
+
+         <div class="scan-line"></div>
+
+         <div class="line-container">
+            <div class="h-line"></div>
+            <div class="h-line"></div>
+            <div class="v-line"></div>
+            <div class="v-line"></div>
+         </div>
+      </div>
+
+      <script>
+         document
+            .getElementById('progressText')
+            .addEventListener('click', function () {
+               const textToCopy = this.textContent;
+               navigator.clipboard
+                  .writeText(textToCopy)
+                  .then(() => {
+                     alert('Text copied to clipboard!');
+                  })
+                  .catch((err) => {
+                     console.error('Failed to copy text: ', err);
+                  });
             });
-        });
-    </script>
-</body>
+      </script>
+   </body>
 </html>
