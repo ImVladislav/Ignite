@@ -95,6 +95,34 @@ body {
    justify-content: center;
    border-radius: 5px;
    cursor: pointer;
+   transition: all 0.3s ease;
+   position: relative;
+   overflow: hidden;
+}
+
+.progress-bar:hover {
+   background-color: #555;
+}
+
+.progress-bar::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+   );
+   transition: 0.5s;
+}
+
+.progress-bar:hover::before {
+   left: 100%;
+   transition: 0.5s;
 }
 
 .progress-text {
@@ -102,6 +130,11 @@ body {
    font-size: 32px;
    letter-spacing: 2px;
    font-weight: bold;
+   transition: all 0.3s ease;
+}
+
+.progress-bar:hover .progress-text {
+   letter-spacing: 3px;
 }
 
 .icons {
@@ -129,6 +162,12 @@ body {
 
 .icons a {
    text-decoration: none;
+   display: inline-block;
+   margin: 0 10px;
+}
+
+.icons img:hover {
+   transform: scale(1.2);
 }
 
 @font-face {
@@ -139,15 +178,6 @@ body {
 }
 h1 {
    font-family: 'GoodTimingBD', sans-serif;
-}
-
-.icons a {
-   display: inline-block; /* Відображення як блок для вирівнювання */
-   margin: 0 10px; /* Проміжки між іконками */
-}
-
-.icons img:hover {
-   transform: scale(1.2); /* Збільшення при наведенні */
 }
 
 /* Добавляем медиа-запросы для мобильных устройств */
