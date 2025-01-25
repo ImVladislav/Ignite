@@ -21,7 +21,7 @@
       </p>
     </div>
     <div class="progress-bar">
-        <div class="progress-text">
+        <div class="progress-text" id="progressText">
           хххххххххххххххххххх
         </div>
       </div>
@@ -42,5 +42,16 @@
             <img src="ico4.png" alt="Icon 5">
         </a>
     </div>
+
+    <script>
+        document.getElementById('progressText').addEventListener('click', function () {
+            const textToCopy = this.textContent; // Отримуємо текст з блоку
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert('Text copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        });
+    </script>
 </body>
 </html>
