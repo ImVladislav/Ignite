@@ -127,10 +127,21 @@ body {
 
 .progress-text {
    color: white;
-   font-size: 32px;
+   font-size: 23px;
    letter-spacing: 2px;
    font-weight: bold;
    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+   .progress-text {
+      font-size: 18px;
+   }
+}
+@media screen and (max-width: 768px) {
+   .progress-text {
+      font-size: 23px;
+   }
 }
 
 .progress-bar:hover .progress-text {
@@ -202,7 +213,7 @@ h1 {
    }
 
    .progress-text {
-      font-size: 20px;
+      font-size: 10px;
    }
 
    .icons {
@@ -247,7 +258,7 @@ h1 {
    }
 
    .progress-text {
-      font-size: 16px;
+      font-size: 8px;
    }
 
    .icons {
